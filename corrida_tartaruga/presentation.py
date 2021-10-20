@@ -1,17 +1,15 @@
-from turtle import *
+import turtle
 import random
 from time import sleep
 
 colors = ['green', 'yellow', 'orange red', 'black', 'white', 'red', 'blue']
+font = ("Comic Sans", 30, "bold")
 
 
-def Text_presentation(text):
+def Presentation():
     for i in range(5):
-        ht()
-
+        turtle.ht()
         color = random.choice(colors)
         sleep(0.25)
-
-        pencolor(color)
-        font = ("Comic Sans", 30, "bold")
-        write(text, False, 'center', font)
+        turtle.pencolor(color)
+        turtle.write('CORRIDA NINJA', False, 'center', font)
