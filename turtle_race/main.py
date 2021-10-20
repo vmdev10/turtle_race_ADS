@@ -1,5 +1,4 @@
 import turtle
-import random
 from time import sleep
 
 from presentation import Presentation
@@ -8,6 +7,9 @@ from players_name import Players_name
 from chosen_turtle import Chosen_turtle
 from show_avatar import Show_avatar
 from countdown import Countdown
+from coordinates_player_1 import Coordinates_player_1
+from coordinates_player_2 import Coordinates_player_2
+from players_race import Players_race
 
 turtles_ninjas = ["gifs/Donatello.gif", "gifs/Leonardo.gif",
                   "gifs/Michelangelo.gif", "gifs/Raphael.gif"]
@@ -18,14 +20,6 @@ positions = [(100, 100), (-100, 100), (-100, -100), (100, -100)]
 def Create_world(world):
     display = turtle.Screen()
     display.bgpic(world)
-
-
-def Victoria(player):
-    player += 100
-
-
-def Tie(player):
-    player += 50
 
 
 Create_world('gifs/background.gif')
@@ -110,51 +104,10 @@ while game > 0:
 
         Countdown()
 
-        player_1.st()
-        player_1.up()
-        player_1.goto(-250, -10)
-        turtle.up()
-        turtle.goto(-250, 85)
-        turtle.write('PLAYER 1', False, 'center', secondary_font)
+        Coordinates_player_1(player_1, -250, -10, -250, 85)
+        Coordinates_player_2(player_2, -250, -30, -250, -100)
 
-        player_2.st()
-        player_2.up()
-        player_2.goto(-250, -30)
-        turtle.up()
-        turtle.goto(-250, -100)
-        turtle.write('PLAYER 2', False, 'center', secondary_font)
-
-        distance_player_1 = 0
-        distance_player_2 = 0
-
-        while distance_player_1 < 500 and distance_player_2 < 500:
-            go_player_1 = random.randint(1, 5)
-            go_player_2 = random.randint(1, 5)
-            distance_player_1 = distance_player_1 + go_player_1
-            distance_player_2 = distance_player_2 + go_player_2
-
-            player_1.fd(go_player_1)
-            player_2.fd(go_player_2)
-
-        if distance_player_1 > distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_1)
-        elif distance_player_1 < distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_2)
-        else:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('EMPATOU!', False, 'center', secondary_font)
-
-            Tie(score_player_1)
-            Tie(score_player_2)
+        Players_race(player_1, player_2)
 
         sleep(3)
         turtle.clear()
@@ -168,51 +121,10 @@ while game > 0:
 
         Countdown()
 
-        player_1.st()
-        player_1.up()
-        player_1.goto(-250, -90)
-        turtle.up()
-        turtle.goto(-250, 150)
-        turtle.write('PLAYER 1', False, 'center', secondary_font)
+        Coordinates_player_1(player_1, -250, -90, -250, 150)
+        Coordinates_player_2(player_2, -250, -100, -250, -180)
 
-        player_2.st()
-        player_2.up()
-        player_2.goto(-250, -100)
-        turtle.up()
-        turtle.goto(-250, -180)
-        turtle.write('PLAYER 2', False, 'center', secondary_font)
-
-        distance_player_1 = 0
-        distance_player_2 = 0
-
-        while distance_player_1 < 500 and distance_player_2 < 500:
-            go_player_1 = random.randint(1, 5)
-            go_player_2 = random.randint(1, 5)
-            distance_player_1 = distance_player_1 + go_player_1
-            distance_player_2 = distance_player_2 + go_player_2
-
-            player_1.fd(go_player_1)
-            player_2.fd(go_player_2)
-
-        if distance_player_1 > distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_1)
-        elif distance_player_1 < distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_2)
-        else:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('EMPATOU!', False, 'center', secondary_font)
-
-            Tie(score_player_1)
-            Tie(score_player_2)
+        Players_race(player_1, player_2)
 
         sleep(3)
         turtle.clear()
@@ -226,51 +138,10 @@ while game > 0:
 
         Countdown()
 
-        player_1.st()
-        player_1.up()
-        player_1.goto(-250, -120)
-        turtle.up()
-        turtle.goto(-250, 200)
-        turtle.write('PLAYER 1', False, 'center', secondary_font)
+        Coordinates_player_1(player_1, -250, -120, -250, 200)
+        Coordinates_player_2(player_2, -250, -150, -250, -220)
 
-        player_2.st()
-        player_2.up()
-        player_2.goto(-250, -150)
-        turtle.up()
-        turtle.goto(-250, -220)
-        turtle.write('PLAYER 2', False, 'center', secondary_font)
-
-        distance_player_1 = 0
-        distance_player_2 = 0
-
-        while distance_player_1 < 500 and distance_player_2 < 500:
-            go_player_1 = random.randint(1, 5)
-            go_player_2 = random.randint(1, 5)
-            distance_player_1 = distance_player_1 + go_player_1
-            distance_player_2 = distance_player_2 + go_player_2
-
-            player_1.fd(go_player_1)
-            player_2.fd(go_player_2)
-
-        if distance_player_1 > distance_player_2:
-            turtle.home()
-            turtle.pencolor('red')
-            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_1)
-        elif distance_player_1 < distance_player_2:
-            turtle.home()
-            turtle.pencolor('red')
-            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_2)
-        else:
-            turtle.home()
-            turtle.pencolor('red')
-            turtle.write('EMPATOU!', False, 'center', secondary_font)
-
-            Tie(score_player_1)
-            Tie(score_player_2)
+        Players_race(player_1, player_2)
 
         sleep(3)
         turtle.clear()
@@ -284,51 +155,10 @@ while game > 0:
 
         Countdown()
 
-        player_1.st()
-        player_1.up()
-        player_1.goto(-250, -90)
-        turtle.up()
-        turtle.goto(-250, 130)
-        turtle.write('PLAYER 1', False, 'center', secondary_font)
+        Coordinates_player_1(player_1, -250, -90, -250, 130)
+        Coordinates_player_2(player_2, -250, -100, -250, -160)
 
-        player_2.st()
-        player_2.up()
-        player_2.goto(-250, -100)
-        turtle.up()
-        turtle.goto(-250, -160)
-        turtle.write('PLAYER 2', False, 'center', secondary_font)
-
-        distance_player_1 = 0
-        distance_player_2 = 0
-
-        while distance_player_1 < 500 and distance_player_2 < 500:
-            go_player_1 = random.randint(1, 5)
-            go_player_2 = random.randint(1, 5)
-            distance_player_1 = distance_player_1 + go_player_1
-            distance_player_2 = distance_player_2 + go_player_2
-
-            player_1.fd(go_player_1)
-            player_2.fd(go_player_2)
-
-        if distance_player_1 > distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_1)
-        elif distance_player_1 < distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_2)
-        else:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('EMPATOU!', False, 'center', secondary_font)
-
-            Tie(score_player_1)
-            Tie(score_player_2)
+        Players_race(player_1, player_2)
 
         sleep(3)
         turtle.clear()
@@ -342,51 +172,10 @@ while game > 0:
 
         Countdown()
 
-        player_1.st()
-        player_1.up()
-        player_1.goto(-250, 0)
-        turtle.up()
-        turtle.goto(-250, 80)
-        turtle.write('PLAYER 1', False, 'center', secondary_font)
+        Coordinates_player_1(player_1, -250, 0, -250, 80)
+        Coordinates_player_2(player_2, -250, -30, -250, -100)
 
-        player_2.st()
-        player_2.up()
-        player_2.goto(-250, -30)
-        turtle.up()
-        turtle.goto(-250, -100)
-        turtle.write('PLAYER 2', False, 'center', secondary_font)
-
-        distance_player_1 = 0
-        distance_player_2 = 0
-
-        while distance_player_1 < 500 and distance_player_2 < 500:
-            go_player_1 = random.randint(1, 5)
-            go_player_2 = random.randint(1, 5)
-            distance_player_1 = distance_player_1 + go_player_1
-            distance_player_2 = distance_player_2 + go_player_2
-
-            player_1.fd(go_player_1)
-            player_2.fd(go_player_2)
-
-        if distance_player_1 > distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_1)
-        elif distance_player_1 < distance_player_2:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
-
-            Victoria(score_player_2)
-        else:
-            turtle.home()
-            turtle.pencolor('green')
-            turtle.write('EMPATOU!', False, 'center', secondary_font)
-
-            Tie(score_player_1)
-            Tie(score_player_2)
+        Players_race(player_1, player_2)
 
         sleep(3)
         turtle.clear()
@@ -396,3 +185,6 @@ while game > 0:
         player_2.hideturtle()
 
     game -= 1
+
+window = turtle.Screen()
+window.exitonclick()
