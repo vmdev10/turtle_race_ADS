@@ -1,4 +1,5 @@
 import turtle
+import random
 from time import sleep
 
 from presentation import Presentation
@@ -9,7 +10,6 @@ from show_avatar import Show_avatar
 from countdown import Countdown
 from coordinates_player_1 import Coordinates_player_1
 from coordinates_player_2 import Coordinates_player_2
-from players_race import Players_race
 
 turtles_ninjas = ["gifs/Donatello.gif", "gifs/Leonardo.gif",
                   "gifs/Michelangelo.gif", "gifs/Raphael.gif"]
@@ -60,6 +60,7 @@ turtle.reset()
 turtle.hideturtle()
 
 player_1 = Show_avatar(player_1, person_player_1)
+turtle.penup()
 turtle.left(90)
 turtle.fd(60)
 
@@ -107,7 +108,42 @@ while game > 0:
         Coordinates_player_1(player_1, -250, -10, -250, 85)
         Coordinates_player_2(player_2, -250, -30, -250, -100)
 
-        Players_race(player_1, player_2)
+        distance_player_1 = 0
+        distance_player_2 = 0
+
+        while distance_player_1 < 500 and distance_player_2 < 500:
+            go_player_1 = random.randint(1, 5)
+            go_player_2 = random.randint(1, 5)
+            distance_player_1 = distance_player_1 + go_player_1
+            distance_player_2 = distance_player_2 + go_player_2
+
+            player_1.fd(go_player_1)
+            player_2.fd(go_player_2)
+
+        if distance_player_1 > distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
+
+            score_player_1 = score_player_1 + 100
+            print(score_player_1)
+
+        elif distance_player_1 < distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
+
+            score_player_2 = score_player_2 + 100
+            print(score_player_2)
+
+        else:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('EMPATOU!', False, 'center', secondary_font)
+
+            score_player_1 = score_player_1 + 50
+            score_player_2 = score_player_2 + 50
+            print(score_player_1, score_player_2)
 
         sleep(3)
         turtle.clear()
@@ -124,7 +160,33 @@ while game > 0:
         Coordinates_player_1(player_1, -250, -90, -250, 150)
         Coordinates_player_2(player_2, -250, -100, -250, -180)
 
-        Players_race(player_1, player_2)
+        distance_player_1 = 0
+        distance_player_2 = 0
+
+        while distance_player_1 < 500 and distance_player_2 < 500:
+            go_player_1 = random.randint(1, 5)
+            go_player_2 = random.randint(1, 5)
+            distance_player_1 = distance_player_1 + go_player_1
+            distance_player_2 = distance_player_2 + go_player_2
+
+            player_1.fd(go_player_1)
+            player_2.fd(go_player_2)
+
+        if distance_player_1 > distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
+
+            score_player_1 = score_player_1 + 100
+            print(score_player_1)
+
+        elif distance_player_1 < distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
+
+            score_player_2 = score_player_2 + 100
+            print(score_player_2)
 
         sleep(3)
         turtle.clear()
@@ -141,7 +203,33 @@ while game > 0:
         Coordinates_player_1(player_1, -250, -120, -250, 200)
         Coordinates_player_2(player_2, -250, -150, -250, -220)
 
-        Players_race(player_1, player_2)
+        distance_player_1 = 0
+        distance_player_2 = 0
+
+        while distance_player_1 < 500 and distance_player_2 < 500:
+            go_player_1 = random.randint(1, 5)
+            go_player_2 = random.randint(1, 5)
+            distance_player_1 = distance_player_1 + go_player_1
+            distance_player_2 = distance_player_2 + go_player_2
+
+            player_1.fd(go_player_1)
+            player_2.fd(go_player_2)
+
+        if distance_player_1 > distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
+
+            score_player_1 = score_player_1 + 100
+            print(score_player_1)
+
+        elif distance_player_1 < distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
+
+            score_player_2 = score_player_2 + 100
+            print(score_player_2)
 
         sleep(3)
         turtle.clear()
@@ -158,7 +246,33 @@ while game > 0:
         Coordinates_player_1(player_1, -250, -90, -250, 130)
         Coordinates_player_2(player_2, -250, -100, -250, -160)
 
-        Players_race(player_1, player_2)
+        distance_player_1 = 0
+        distance_player_2 = 0
+
+        while distance_player_1 < 500 and distance_player_2 < 500:
+            go_player_1 = random.randint(1, 5)
+            go_player_2 = random.randint(1, 5)
+            distance_player_1 = distance_player_1 + go_player_1
+            distance_player_2 = distance_player_2 + go_player_2
+
+            player_1.fd(go_player_1)
+            player_2.fd(go_player_2)
+
+        if distance_player_1 > distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
+
+            score_player_1 = score_player_1 + 100
+            print(score_player_1)
+
+        elif distance_player_1 < distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
+
+            score_player_2 = score_player_2 + 100
+            print(score_player_2)
 
         sleep(3)
         turtle.clear()
@@ -175,7 +289,33 @@ while game > 0:
         Coordinates_player_1(player_1, -250, 0, -250, 80)
         Coordinates_player_2(player_2, -250, -30, -250, -100)
 
-        Players_race(player_1, player_2)
+        distance_player_1 = 0
+        distance_player_2 = 0
+
+        while distance_player_1 < 500 and distance_player_2 < 500:
+            go_player_1 = random.randint(1, 5)
+            go_player_2 = random.randint(1, 5)
+            distance_player_1 = distance_player_1 + go_player_1
+            distance_player_2 = distance_player_2 + go_player_2
+
+            player_1.fd(go_player_1)
+            player_2.fd(go_player_2)
+
+        if distance_player_1 > distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 1 venceu!', False, 'center', secondary_font)
+
+            score_player_1 = score_player_1 + 100
+            print(score_player_1)
+
+        elif distance_player_1 < distance_player_2:
+            turtle.home()
+            turtle.pencolor('green')
+            turtle.write('Player 2 venceu!', False, 'center', secondary_font)
+
+            score_player_2 = score_player_2 + 100
+            print(score_player_2)
 
         sleep(3)
         turtle.clear()
@@ -185,6 +325,29 @@ while game > 0:
         player_2.hideturtle()
 
     game -= 1
+
+
+Create_world('gifs/background.gif')
+Presentation()
+
+turtle.penup()
+turtle.right(90)
+turtle.fd(25)
+turtle.pendown()
+
+turtle.write('PLACAR:', False, 'center', secondary_font)
+
+turtle.penup()
+turtle.fd(25)
+
+turtle.write(f'PLAYER 1: {score_player_1}',
+             False, 'center', secondary_font)
+
+turtle.penup()
+turtle.fd(25)
+
+turtle.write(f'PLAYER 2: {score_player_2}',
+             False, 'center', secondary_font)
 
 window = turtle.Screen()
 window.exitonclick()
